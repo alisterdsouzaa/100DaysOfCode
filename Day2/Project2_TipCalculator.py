@@ -11,6 +11,6 @@ percentage_tip = ((total_bill * percentage_tip) / 100)
 numOfPeople = int(input(print("How many people you want to split the bill with? \n")))
 
 total_bill_per_head = (total_bill + percentage_tip) / numOfPeople
-total_bill_per_head = round(total_bill_per_head, 2)
+total_bill_per_head = "{:.2f}".format(total_bill_per_head)
 
 print(f"Your bill per person is ${total_bill_per_head}")

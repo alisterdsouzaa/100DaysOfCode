@@ -30,7 +30,7 @@ print(today)
 print(yesterday)
 
 STOCK_DATA_API_KEY = os.getenv("API_KEY", default="No Environment Key found")
-STOCK_NEWS_DATA_API_KEY = "369324159a2f4aeba24ab09e26263f98"
+STOCK_NEWS_DATA_API_KEY = ""
 
 #  Get yesterday's closing stock price. Hint: You can perform list comprehensions on Python dictionaries.
 #  e.g. [new_value for (key, value) in dictionary.items()]

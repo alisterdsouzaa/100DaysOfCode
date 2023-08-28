@@ -38,7 +38,7 @@ def main():
     app = QApplication(sys.argv)
     app.setStyle("Fusion")  # Use the Fusion style
 
-    window = TabbedApplication()
+    window = TabbedApplication() #create obj
     window.show()
 
     sys.exit(app.exec())

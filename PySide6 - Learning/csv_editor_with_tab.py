@@ -3,14 +3,14 @@ import csv
 
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QPushButton, QLabel, QLineEdit, \
-    QTableWidget, QTableWidgetItem, QFileDialog, QTabWidget, QMessageBox
+    QTableWidget, QTableWidgetItem, QFileDialog, QTabWidget, QMessageBox, QHBoxLayout
 
 
 class CSVEditorApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("CSV Editor")
+        self.setWindowTitle("Param Edit and Save GUI")
 
         self.tab_widget = QTabWidget()
         self.setCentralWidget(self.tab_widget)
@@ -20,26 +20,24 @@ class CSVEditorApp(QMainWindow):
 
     def setup_tab1(self):
         tab1 = QWidget()
-        layout = QVBoxLayout()
-
+        vertical_layout = QVBoxLayout()
+        horizontal_layout = QHBoxLayout()
 
         self.import_button = QPushButton("Import CSV")
         self.import_button.clicked.connect(self.import_csv)
-        layout.addWidget(self.import_button, alignment=Qt.AlignHCenter)
+        horizontal_layout.addWidget(self.import_button, alignment=Qt.AlignHCenter)
         # layout.addWidget(self.import_button)
 
         self.save_button = QPushButton("Save CSV")
         self.save_button.clicked.connect(self.save_csv)
-        layout.addWidget(self.save_button, alignment=Qt.AlignHCenter)
+        horizontal_layout.addWidget(self.save_button, alignment=Qt.AlignHCenter)
+
+        vertical_layout.addLayout(horizontal_layout)
 
         self.table = QTableWidget()
-        layout.addWidget(self.table)
+        vertical_layout.addWidget(self.table)
 
-        # self.save_button = QPushButton("Save CSV")
-        # self.save_button.clicked.connect(self.save_csv)
-        # layout.addWidget(self.save_button, alignment=Qt.AlignHCenter)
-
-        tab1.setLayout(layout)
+        tab1.setLayout(vertical_layout)
         self.tab_widget.addTab(tab1, "CSV Editor")
 
         self.data = []

@@ -1,6 +1,7 @@
 import sys
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QLineEdit, QVBoxLayout, QWidget
 
+
 # Create a subclass of QMainWindow to define your custom window
 class MyWindow(QMainWindow):
     def __init__(self):
@@ -32,6 +33,7 @@ class MyWindow(QMainWindow):
         input_text = self.input_field.text()
         print("Button Clicked!")
         print("Input Text:", input_text)
+
 
 if __name__ == "__main__":
     # Create a QApplication instance

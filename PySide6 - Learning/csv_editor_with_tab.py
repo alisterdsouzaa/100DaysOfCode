@@ -54,7 +54,6 @@ class CSVEditorApp(QMainWindow):
         tab2.setLayout(layout)
         self.tab_widget.addTab(tab2, "Tab 2")
 
-
     def import_csv(self):
         options = QFileDialog.Options()
         options |= QFileDialog.ReadOnly
@@ -101,13 +100,13 @@ class CSVEditorApp(QMainWindow):
                     if address_item and value_item:
                         new_data.append([address_item.text(), value_item.text()])
 
-
                 with open(file_path, 'w', newline='') as csv_file:
                     csv_writer = csv.writer(csv_file)
                     csv_writer.writerows(new_data)
 
     def show_warning_box(self):
         QMessageBox.warning(self, "Warning", "Please Import your file first")
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

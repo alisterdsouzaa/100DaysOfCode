@@ -92,7 +92,7 @@ class CSVEditorApp(QMainWindow):
     def addIndex_newTab(self):
         # Open the CSV file for reading
         global first_column_values
-        with open('v3.0.0 - Akash_m2 (1) (2).csv', 'r') as csv_file:
+        with open('../Pyside6 - QStack/v3.0.0 - Akash_m2 (1) (2).csv', 'r') as csv_file:
             csv_reader = csv.reader(csv_file)
             # Iterate over each row in the CSV file
             for row in csv_reader:

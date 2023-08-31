@@ -1,10 +1,8 @@
 import csv
 
-# Initialize an empty list to store the values from the first column
 first_column_values = []
 
-# Open the CSV file for reading
-with open('v3.0.0 - Akash_m2 (1) (2).csv', 'r') as csv_file:
+with open('../Pyside6 - QStack/v3.0.0 - Akash_m2 (1) (2).csv', 'r') as csv_file:
     csv_reader = csv.reader(csv_file)
     # Iterate over each row in the CSV file
     for row in csv_reader:
@@ -17,5 +15,38 @@ print(first_column_values)
 
 int_addresses = [int(hex_address, 16) >> 8 for hex_address in first_column_values]
 print(int_addresses)
-# shifted_hex_addresses = [hex(address) for address in int_addresses]
-# print(shifted_hex_addresses)
+print("\n")
+
+# Initialize an empty dictionary to store counts
+number_counts = {}
+
+# Count occurrences of each number
+for num in int_addresses:
+    if num in number_counts:
+        number_counts[num] += 1
+    else:
+        number_counts[num] = 1
+
+
+# Initialize separate variables to store counts
+count_0 = number_counts.get(0, 0)
+count_1 = number_counts.get(1, 0)
+count_2 = number_counts.get(2, 0)
+count_3 = number_counts.get(3, 0)
+count_4 = number_counts.get(4, 0)
+count_5 = number_counts.get(5, 0)
+count_6 = number_counts.get(6, 0)
+count_7 = number_counts.get(7, 0)
+count_8 = number_counts.get(8, 0)
+count_9 = number_counts.get(9, 0)
+count_10 = number_counts.get(10, 0)
+
+count_list = []
+for i in range(11):
+    count = locals().get(f"count_{i}", None)
+    if count is not None:
+        count_list.append(count)
+        print(f"Count of {i}: {count}")
+
+
+print(count_list)

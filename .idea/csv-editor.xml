@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\Graph_Plotting\Table_28_07_23.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\PySide6 - Learning\abc.csv">
           <value>
             <Attribute>
@@ -11,6 +18,27 @@
           </value>
         </entry>
         <entry key="\PySide6 - Learning\v3.0.0 - Akash_m2 (1) (2).csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Pyside6 - GUI Multiple GUI's\v3.0.0 - Akash_m2 (1) (2).csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Pyside6 - QStack\Blank.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Pyside6 - QStack\v3.0.0 - Akash_m2 (1) (2).csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

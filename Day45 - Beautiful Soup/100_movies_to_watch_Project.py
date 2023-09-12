@@ -32,4 +32,3 @@ with open("top_100_movies.txt", "w") as file:
     for movie_title in movie_titles:
         file.writelines(movie_title)
         file.write("\n")
-

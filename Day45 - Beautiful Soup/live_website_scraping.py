@@ -16,4 +16,3 @@ print("\n")
 
 for tag in all_anchor_tags:
     print(tag.get("href"))
-
